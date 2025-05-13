@@ -1,0 +1,40 @@
+nav {
+    height: 60px;
+    width: 100%;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    position: fixed;
+    justify-content: space-between;
+}
+
+nav h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+nav .links {
+    display: flex;
+    gap: 1rem;
+}
+
+nav .link {
+    display: flex;
+    gap: 0.5rem;
+    opacity: 0.5;
+    transition: opacity 0.3s ease-out;
+}
+
+nav .link:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+@media (max-width: 1092px) {
+    nav h1 {
+        font-size: 1rem;
+    }
+
+
+}

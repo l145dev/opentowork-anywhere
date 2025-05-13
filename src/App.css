@@ -1,0 +1,115 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* custom classes */
+
+.custom-container {
+    padding: 1rem;
+    padding-top: calc(1rem + 60px);
+}
+
+.opentowork {
+    background-color: #28750f;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.4rem;
+    font-weight: 600;
+    margin-right: 0.25rem;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: 500;
+    text-align: center;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+.page-container {
+    /* remove padding left and right (1 + 1 rem), top and bottom (1+1 rem), in height subtract navbar height too */
+    height: calc(100vh - 2rem - 60px);
+    width: calc(100vw - 2rem);
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+}
+
+/* main content */
+.image-container {
+    width: 512px;
+    height: auto;
+    max-width: 90%;
+    aspect-ratio: 1/1;
+    border-radius: 100%;
+    border: 1px solid var(--border);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* inside image container (placeholder) */
+.upload-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* image itself - middle in hierarchy */
+.image-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.image-wrapper img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.opentoworkbanneroverlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+/* always on top */
+.cursor-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    cursor: pointer;
+    z-index: 999;
+}
+
+#uploadInput {
+    opacity: 0;
+}
+
+.compliance {
+    position: absolute;
+    bottom: 0;
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+a {
+    transition: color 0.3s ease-out;
+}
+
+a:hover {
+    color: rgba(255, 255, 255, 1);
+}
