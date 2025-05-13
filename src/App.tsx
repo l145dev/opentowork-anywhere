@@ -72,9 +72,9 @@ function App() {
 
             {/* image itself - middle in hierarchy */}
             <div className='image-wrapper' ref={imageWrapperRef}>
-              <img src={file} alt="opentowork image" />
               {file && (
                 <>
+                  <img src={file} alt="opentowork image" />
                   <img src={opentoworkbanner} alt="open to work banner" className='opentoworkbanneroverlay' />
                 </>
               )}
